@@ -1,0 +1,17 @@
+<h1 class="mt-3">DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!-- Entre corchetes propiedad en el hijo y envío la información en el componente padre -->
+    <app-dbz-list
+      [characterList]="characters"
+      (onCharacterDelete)="onDeleteCharacter($event)">
+  </app-dbz-list>
+  </div>
+
+  <div class="col">
+    <!-- Paréntesis son eventos, corchétes son atributos -->
+    <app-dbz-add-character (onNewCharacter)="onNewCharacter($event)"></app-dbz-add-character>
+  </div>
+</div>
